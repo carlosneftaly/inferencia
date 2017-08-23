@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pruebas de Hipóstesis e Inferencia</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Pruebas de Hipóstesis e Inferencia">
+  <meta name="author" content="Carlos Neftaly Lozano A.">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/EM.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Pruebas de Hipóstesis e Inferencia</h1>
+    <h2>Diseño de Experimentos</h2>
+    <p>Carlos Neftaly Lozano A.<br/>Microbiólogo Industrial y Ambiental, Msc</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Una mirada NO estadística...</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="./figure/corte.jpg" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" /></p>
+
+<p>En un juicio el jurado debe decidir entre dos hipótesis. La <em>hipótesis nula</em> es: </p>
+
+<p>\[H_0: \text{El acusado es  inocente}\]</p>
+
+<p><em>La hipótesis alternativa o del investigador es:</em> </p>
+
+<p>\[H_a: \text{El acusado es culpable}\]</p>
+
+<blockquote>
+<p>El jurado <em>no sabe</em> cual de las dos hipótesis es cierta. El debe tomar la decisión con base a la <em>evidencia</em> presentada. </p>
+</blockquote>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Una mirada NO estadística...</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><span style="display:block; height: 2cm;"></span></p>
+
+<p><img src="./figure/Inferencia.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Una mirada NO estadística...</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>A partir del veredicto del jurado se pueden presentar dos <em>tipos de errores</em>: </p>
+
+<ol class = "build incremental">
+<li><p>El jurado condena a una persona inocente.</p>
+
+<ul>
+<li>Es denominado <em>Error Tipo I</em> y ocurre cuando rechazamos una hipótesis nula      verdadera. </li>
+</ul></li>
+<li><p>El jurado declara inocente a una persona culpable.</p>
+
+<ul>
+<li>Es denominado <em>Error Tipo II</em> y ocurre cuando no rechazamos una hipótesis nula      falsa.<br></li>
+</ul></li>
+</ol>
+
+<p><img src="./figure/error.jpg" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Una mirada NO estadística: Conceptos claves</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Bajo este panorama los conceptos críticos a tener en cuenta son:</p>
+
+<ol class = "build incremental">
+<li>Hay dos hipótesis, \(H_0\) y \(H_a\).</li>
+<li>El desarollo de la inferencia asume de partida que la hipótesis nula (\(H_0\)) es verdadera. </li>
+<li>El objetivo es determinar <em>si hay suficiente evidencia</em> para inferir que la hipótesis alternativa es cierta o  que la nula es poca probable para ser verdadera. </li>
+<li>Hay dos posibles decisiones: 
+
+<ul>
+<li>Rechazar la hipótesis nula</li>
+<li>No hay suficiente evidencia para soportar \(H_a\)</li>
+</ul></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Conceptos en Pruebas de hipótesis</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="./figure/Muestra.jpg" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Comparando dos grupos...</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Comparando dos grupos...</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><span style="display:block; height: 2cm;"></span>
+\[ H_0: Promedio_{Pseudomonas} =  Promedio_{Serratia}\]</p>
+
+<p>\[ H_a: Promedio_{Pseudomonas} \neq  Promedio_{Serratia}\]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Comparando dos grupos...</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><span style="display:block; height: 5cm;"></span></p>
+
+<p>\[ t = \frac{ \bar{X_1} - \bar{X_2} }{S_{ \bar{X_1} -  \bar{X_2} }  } \]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Comparando dos grupos...</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><span style="display:block; height: 2cm;"></span>
+<img src="./figure/tplot.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Reglas de decisión</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><span style="display:block; height: 3cm;"></span></p>
+
+<ol class = "build incremental">
+<li>Intervalos de confianza
+<span style="display:block; height: 2cm;"></span></li>
+<li>Valores P </li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Interpretando el Valor P</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><span style="display:block; height: 2cm;"></span></p>
+
+<p><img src="./figure/pvalue.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Salida Prueba <em>t</em></h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">wdata = data.frame(
+   Cepa = factor(rep(c(&quot;Pseudomonas sp.&quot;, &quot;Serratia sp.&quot;), each=200)),
+   Deg = c(rnorm(200, 52), rnorm(200, 58)))
+t.test(Deg~Cepa, var.equal = T,data=wdata)
+</code></pre>
+
+<pre><code>## 
+##  Two Sample t-test
+## 
+## data:  Deg by Cepa
+## t = -62.385, df = 398, p-value &lt; 2.2e-16
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -6.241368 -5.860015
+## sample estimates:
+## mean in group Pseudomonas sp.    mean in group Serratia sp. 
+##                      51.99143                      58.04212
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Una mirada NO estadística...'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Una mirada NO estadística...'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Una mirada NO estadística...'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Una mirada NO estadística: Conceptos claves'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Conceptos en Pruebas de hipótesis'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Comparando dos grupos...'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Comparando dos grupos...'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Comparando dos grupos...'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Comparando dos grupos...'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Reglas de decisión'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Interpretando el Valor P'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Salida Prueba <em>t</em>'>
+         12
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
