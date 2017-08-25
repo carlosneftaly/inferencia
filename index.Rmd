@@ -95,8 +95,22 @@ ggboxplot(wdata, x='Cepa',y='Deg', xlab='Cepa bacteriana',ylab='Concentración (
 
 <span style="display:block; height: 2cm;"></span>
 $$ H_0: Promedio_{Pseudomonas} =  Promedio_{Serratia}$$
+```{r, echo=FALSE,fig.align='center',}
+      knitr::include_graphics('./figure/travolta.gif')
+```
 
+---
+
+
+
+## Comparando dos grupos...
+
+<span style="display:block; height: 2cm;"></span>
 $$ H_a: Promedio_{Pseudomonas} \neq  Promedio_{Serratia}$$
+
+```{r, echo=FALSE,fig.align='center',}
+      knitr::include_graphics('./figure/banana.gif')
+```
 
 ---
 

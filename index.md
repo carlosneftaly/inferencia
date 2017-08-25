@@ -81,8 +81,18 @@ Bajo este panorama los conceptos críticos a tener en cuenta son:
 
 <span style="display:block; height: 2cm;"></span>
 $$ H_0: Promedio_{Pseudomonas} =  Promedio_{Serratia}$$
+<img src="./figure/travolta.gif" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
 
+---
+
+
+
+## Comparando dos grupos...
+
+<span style="display:block; height: 2cm;"></span>
 $$ H_a: Promedio_{Pseudomonas} \neq  Promedio_{Serratia}$$
+
+<img src="./figure/banana.gif" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;" />
 
 ---
 
@@ -100,7 +110,7 @@ $$ t = \frac{ \bar{X_1} - \bar{X_2} }{S_{ \bar{X_1} -  \bar{X_2} }  } $$
 
 ## Comparando dos grupos...
 <span style="display:block; height: 2cm;"></span>
-<img src="./figure/tplot.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" style="display: block; margin: auto;" />
+<img src="./figure/tplot.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" style="display: block; margin: auto;" />
 
 ---
 
@@ -117,7 +127,7 @@ $$ t = \frac{ \bar{X_1} - \bar{X_2} }{S_{ \bar{X_1} -  \bar{X_2} }  } $$
 
 <span style="display:block; height: 2cm;"></span>
 
-<img src="./figure/pvalue.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" style="display: block; margin: auto;" />
+<img src="./figure/pvalue.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" style="display: block; margin: auto;" />
 
 --- 
 
