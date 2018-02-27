@@ -20,7 +20,7 @@ knit        : slidify::knit2slides
 En un juicio el jurado debe decidir entre dos hipótesis. La _hipótesis nula_ es: 
 
 
-$$H_0: \text{El acusado es  inocente}$$
+$$ H_0: \text{El acusado es  inocente} $$
 
 _La hipótesis alternativa o del investigador es:_ 
 
@@ -73,7 +73,7 @@ Bajo este panorama los conceptos críticos a tener en cuenta son:
 
 ## Comparando dos grupos... 
 
-<img src="figure/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" style="display: block; margin: auto;" />
 
 --- 
 
